@@ -7,5 +7,14 @@
     <context:component-scan base-package="com.egorl.car_service"/>
     
     <gui:screens base-packages="com.egorl.car_service.web"/>
+    <bean id="carservice_proxyCreator" class="com.haulmont.cuba.web.sys.remoting.WebRemoteProxyBeanCreator">
+        <property name="serverSelector" ref="cuba_ServerSelector"/>
+        <property name="remoteServices">
+            <map>
+                <entry key="carservice_CountryService" value="com.egorl.car_service.service.CountryService"/>
+                <entry key="carservice_CountryDaoService" value="com.egorl.car_service.dao.CountryDaoService"/>
+            </map>
+        </property>
+    </bean>
 
 </beans>

@@ -3,5 +3,6 @@
     <persistence-unit name="car-service" transaction-type="RESOURCE_LOCAL">
 
         <class>com.egorl.car_service.entity.Country</class>
+        <class>com.egorl.car_service.entity.CarDealer</class>
     </persistence-unit>
 </persistence>
