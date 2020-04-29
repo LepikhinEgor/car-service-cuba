@@ -15,11 +15,6 @@ public class CarDealer extends StandardEntity {
     @Transient
     private CountryService countryService;
 
-//    @Inject
-//    public void setCountryService(CountryService countryService) {
-//        this.countryService = countryService;
-//    }
-
     @Column(name = "NAME", unique = true, nullable = false)
     private String name;
 
