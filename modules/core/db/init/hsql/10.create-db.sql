@@ -15,3 +15,21 @@ create table CARSERVICE_COUNTRY (
     primary key (ID)
 )^
 -- end CARSERVICE_COUNTRY
+-- begin CARSERVICE_CAR_DEALER
+create table CARSERVICE_CAR_DEALER (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NAME varchar(255) not null,
+    COUNTRY_ID varchar(36),
+    CODE integer not null,
+    --
+    primary key (ID)
+)^
+-- end CARSERVICE_CAR_DEALER
