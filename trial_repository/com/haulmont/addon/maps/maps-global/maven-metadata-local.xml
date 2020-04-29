@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.haulmont.addon.maps</groupId>
+  <artifactId>maps-global</artifactId>
+  <versioning>
+    <release>1.2.0.trial</release>
+    <versions>
+      <version>0.1.alpha</version>
+      <version>1.0.0.trial</version>
+      <version>1.1.0.trial</version>
+      <version>1.2.0.trial</version>
+    </versions>
+    <lastUpdated>20200428200231</lastUpdated>
+  </versioning>
+</metadata>
