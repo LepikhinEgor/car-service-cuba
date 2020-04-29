@@ -4,5 +4,7 @@
         <item screen="carservice_Country.browse"/>
         <item screen="carservice_CarDealer.browse"/>
         <item screen="carservice_Color.browse"/>
+        <item screen="carservice_CarEquipment.browse"/>
+        <item screen="carservice_CarMake.browse"/>
     </menu>
 </menu-config>

@@ -5,5 +5,7 @@
         <class>com.egorl.car_service.entity.Country</class>
         <class>com.egorl.car_service.entity.CarDealer</class>
         <class>com.egorl.car_service.entity.Color</class>
+        <class>com.egorl.car_service.entity.CarMake</class>
+        <class>com.egorl.car_service.entity.CarEquipment</class>
     </persistence-unit>
 </persistence>

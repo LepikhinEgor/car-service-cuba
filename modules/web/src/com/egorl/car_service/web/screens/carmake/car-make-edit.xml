@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.egorl.car_service.web.screens.carmake">
+    <data>
+        <instance id="carMakeDc"
+                  class="com.egorl.car_service.entity.CarMake"
+                  view="_local">
+            <loader/>
+        </instance>
+        <collection id="CarEquipmentsDc"
+                    class="com.egorl.car_service.entity.CarEquipment"
+                    view="_local">
+            <loader id="carEquipmentsDl">
+                <query>
+                    <![CDATA[select ce from carservice_CarEquipment ce where ce.carMake = :carMake]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="carMakeDc">
+            <column width="250px">
+                <textField id="nameField" property="name"/>
+            </column>
+        </form>
+        <groupBox caption="Equipments">
+            <table id="ordersDcTable" dataContainer="CarEquipmentsDc" height="200px" width="300px">
+                <columns>
+                    <column id="name"/>
+                    <column id="price"/>
+                    <column id="carType"/>
+                    <column id="note"/>
+                </columns>
+            </table>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
