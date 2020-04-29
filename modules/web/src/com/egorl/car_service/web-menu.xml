@@ -3,5 +3,6 @@
     <menu id="application-carservice" insertBefore="administration">
         <item screen="carservice_Country.browse"/>
         <item screen="carservice_CarDealer.browse"/>
+        <item screen="carservice_Color.browse"/>
     </menu>
 </menu-config>

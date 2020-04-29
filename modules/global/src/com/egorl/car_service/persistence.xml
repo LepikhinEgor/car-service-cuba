@@ -4,5 +4,6 @@
 
         <class>com.egorl.car_service.entity.Country</class>
         <class>com.egorl.car_service.entity.CarDealer</class>
+        <class>com.egorl.car_service.entity.Color</class>
     </persistence-unit>
 </persistence>

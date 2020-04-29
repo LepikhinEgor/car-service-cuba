@@ -11,17 +11,17 @@ import javax.inject.Inject;
 @Service(CountryDaoService.NAME)
 public class CountryDaoServiceBean implements CountryDaoService {
 
-    private Persistence persistence;
-
-    @Inject
-    public void setPersistence(Persistence persistence) {
-        this.persistence = persistence;
-    }
+//    private Persistence persistence;
+//
+//    @Inject
+//    public void setPersistence(Persistence persistence) {
+//        this.persistence = persistence;
+//    }
 
     @Transactional
     public void create(Country country) {
-        EntityManager entityManager = persistence.getEntityManager();
-
-        entityManager.persist(country);
+//        EntityManager entityManager = persistence.getEntityManager();
+//
+//        entityManager.persist(country);
     }
 }
