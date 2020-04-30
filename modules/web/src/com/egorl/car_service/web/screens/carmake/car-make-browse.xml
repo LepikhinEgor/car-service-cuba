@@ -7,7 +7,7 @@
     <data readOnly="true">
         <collection id="carMakesDc"
                     class="com.egorl.car_service.entity.CarMake"
-                    view="_local">
+                    view="carMake-view">
             <loader id="carMakesDl">
                 <query>
                     <![CDATA[select e from carservice_CarMake e]]>
@@ -34,6 +34,7 @@
             </actions>
             <columns>
                 <column id="name"/>
+                <column id="carDealer"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

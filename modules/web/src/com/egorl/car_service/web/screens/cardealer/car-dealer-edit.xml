@@ -6,9 +6,18 @@
     <data>
         <instance id="carDealerDc"
                   class="com.egorl.car_service.entity.CarDealer"
-                  view="_local">
+                  view="carDealer-view_1">
             <loader/>
         </instance>
+        <collection id="CountryDc"
+                    class="com.egorl.car_service.entity.Country"
+                    view="_local">
+            <loader id="countryDl">
+                <query>
+                    <![CDATA[select c from carservice_Country c]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -17,6 +26,11 @@
             <column width="250px">
                 <textField id="nameField" property="name"/>
                 <textField id="codeField" property="code"/>
+                <lookupPickerField id="countryField" optionsContainer="CountryDc" property="country">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

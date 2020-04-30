@@ -6,7 +6,7 @@
     <data>
         <instance id="carMakeDc"
                   class="com.egorl.car_service.entity.CarMake"
-                  view="_local">
+                  view="carMake-view_1">
             <loader/>
         </instance>
         <collection id="CarEquipmentsDc"
@@ -18,6 +18,15 @@
                 </query>
             </loader>
         </collection>
+        <collection id="CarDealersDc"
+                    class="com.egorl.car_service.entity.CarDealer"
+                    view="_local">
+            <loader id="carDealersDl">
+                <query>
+                    <![CDATA[select cd from carservice_CarDealer cd]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -25,6 +34,11 @@
         <form id="form" dataContainer="carMakeDc">
             <column width="250px">
                 <textField id="nameField" property="name"/>
+                <lookupPickerField id="carDealerField" optionsContainer="CarDealersDc" property="carDealer">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
             </column>
         </form>
         <groupBox caption="Equipments">

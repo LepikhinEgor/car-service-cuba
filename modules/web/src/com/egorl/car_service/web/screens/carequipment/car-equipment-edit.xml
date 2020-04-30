@@ -6,9 +6,18 @@
     <data>
         <instance id="carEquipmentDc"
                   class="com.egorl.car_service.entity.CarEquipment"
-                  view="_local">
+                  view="carEquipment-view_1">
             <loader/>
         </instance>
+        <collection id="CarMakesDc"
+                    class="com.egorl.car_service.entity.CarMake"
+                    view="_local">
+            <loader id="carMakesDl">
+                <query>
+                    <![CDATA[select cd from carservice_CarMake cd]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -19,6 +28,11 @@
                 <textField id="priceField" property="price"/>
                 <lookupField id="carTypeField" property="carType"/>
                 <textField id="noteField" property="note"/>
+                <lookupPickerField id="carDealerField" optionsContainer="CarMakesDc" property="carMake">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

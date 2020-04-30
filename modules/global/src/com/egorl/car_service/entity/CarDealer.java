@@ -25,12 +25,12 @@ public class CarDealer extends StandardEntity {
     @Column(name = "CODE", unique = true, nullable = false)
     private Integer code;
 
-    @PrePersist
-    public void prePersist() {
-        countryService = AppContext.getApplicationContext().getBean(CountryService.class); //??? Иожно ли иначе, через Inject
-        if (country == null)
-            country = countryService.getDefaultCountry();
-    }
+//    @PrePersist
+//    public void prePersist() {
+//        countryService = AppContext.getApplicationContext().getBean(CountryService.class); //??? Иожно ли иначе, через Inject
+//        if (country == null)
+//            country = countryService.getDefaultCountry();
+//    }
 
     public Country getCountry() {
         return country;

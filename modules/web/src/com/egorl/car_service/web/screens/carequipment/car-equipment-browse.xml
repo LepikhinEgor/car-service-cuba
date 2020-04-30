@@ -7,7 +7,7 @@
     <data readOnly="true">
         <collection id="carEquipmentsDc"
                     class="com.egorl.car_service.entity.CarEquipment"
-                    view="_local">
+                    view="carEquipment-view">
             <loader id="carEquipmentsDl">
                 <query>
                     <![CDATA[select e from carservice_CarEquipment e]]>
@@ -37,6 +37,7 @@
                 <column id="price"/>
                 <column id="carType"/>
                 <column id="note"/>
+                <column id="carMake"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

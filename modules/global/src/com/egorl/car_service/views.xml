@@ -4,4 +4,19 @@
     <view entity="carservice_CarDealer" name="carDealer-view" extends="_local">
         <property name="country" view="_local"/>
     </view>
+    <view entity="carservice_CarMake" name="carMake-view" extends="_local">
+        <property name="carDealer" view="_local"/>
+    </view>
+    <view entity="carservice_CarDealer" name="carDealer-view_1" extends="_local">
+        <property name="country" view="_local"/>
+    </view>
+    <view entity="carservice_CarMake" name="carMake-view_1" extends="_local">
+        <property name="carDealer" view="_local"/>
+    </view>
+    <view entity="carservice_CarEquipment" name="carEquipment-view" extends="_local">
+        <property name="carMake" view="_local"/>
+    </view>
+    <view entity="carservice_CarEquipment" name="carEquipment-view_1" extends="_local">
+        <property name="carMake" view="_local"/>
+    </view>
 </views>
