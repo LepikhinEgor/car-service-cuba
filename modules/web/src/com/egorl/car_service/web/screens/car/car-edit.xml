@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.egorl.car_service.web.screens.car">
+    <data>
+        <instance id="carDc"
+                  class="com.egorl.car_service.entity.Car"
+                  view="car-view_5">
+            <loader/>
+        </instance>
+        <collection id="CarDealersDc"
+                    class="com.egorl.car_service.entity.CarDealer"
+                    view="_local">
+            <loader id="CarDealersDl">
+                <query>
+                    <![CDATA[select cd from carservice_CarDealer cd]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="CarMakesDc"
+                    class="com.egorl.car_service.entity.CarMake"
+                    view="_local">
+            <loader id="carMakesDl">
+                <query>
+                    <![CDATA[select cm from carservice_CarMake cm where cm.carDealer = :carDealer]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="CarEquipsDc"
+                    class="com.egorl.car_service.entity.CarEquipment"
+                    view="_local">
+            <loader id="carEquipsDl">
+                <query>
+                    <![CDATA[select ce from carservice_CarEquipment ce where ce.carMake = :carMake]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="carDc">
+            <column width="250px">
+                <lookupPickerField id="carDealersField" optionsContainer="CarDealersDc" property="carDealer">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+                <lookupPickerField id="carMakesField" optionsContainer="CarMakesDc" property="carMake">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+                <lookupPickerField id="carEquipsField" optionsContainer="CarEquipsDc" property="equipment">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+                <textField id="yearOfIssueField" property="yearOfIssue"/>
+                <textField id="costField" property="cost"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,9 +1,11 @@
 package com.egorl.car_service.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 
+@NamePattern("%s|name")
 @Table(name = "CARSERVICE_CAR_EQUIPMENT")
 @Entity(name = "carservice_CarEquipment")
 public class CarEquipment extends StandardEntity {

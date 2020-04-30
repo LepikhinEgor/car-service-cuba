@@ -19,4 +19,22 @@
     <view entity="carservice_CarEquipment" name="carEquipment-view_1" extends="_local">
         <property name="carMake" view="_local"/>
     </view>
+    <view entity="carservice_Car" name="car-view" extends="_local">
+        <property name="carDealer" view="_local"/>
+    </view>
+    <view entity="carservice_Car" name="car-view_1" extends="car-view">
+        <property name="carMake" view="_local"/>
+    </view>
+    <view entity="carservice_Car" name="car-view_2" extends="car-view_1">
+        <property name="equipment" view="_local"/>
+    </view>
+    <view entity="carservice_Car" name="car-view_3" extends="_local">
+        <property name="carMake" view="_local"/>
+    </view>
+    <view entity="carservice_Car" name="car-view_4" extends="car-view_3">
+        <property name="carDealer" view="_local"/>
+    </view>
+    <view entity="carservice_Car" name="car-view_5" extends="car-view_4">
+        <property name="equipment" view="_local"/>
+    </view>
 </views>

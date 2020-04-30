@@ -6,5 +6,6 @@
         <item screen="carservice_Color.browse"/>
         <item screen="carservice_CarEquipment.browse"/>
         <item screen="carservice_CarMake.browse"/>
+        <item screen="carservice_Car.browse"/>
     </menu>
 </menu-config>

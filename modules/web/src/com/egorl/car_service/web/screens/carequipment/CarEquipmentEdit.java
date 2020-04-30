@@ -13,12 +13,4 @@ import javax.inject.Inject;
 @LoadDataBeforeShow
 public class CarEquipmentEdit extends StandardEditor<CarEquipment> {
 
-//    @Inject
-//    private CollectionLoader<CarMake> carMakesDl;
-//
-//    @Subscribe
-//    protected void onBeforeShow(BeforeShowEvent event) {
-//        carMakesDl.setParameter("carEquip", getEditedEntity());
-//        getScreenData().loadAll();
-//    }
 }
