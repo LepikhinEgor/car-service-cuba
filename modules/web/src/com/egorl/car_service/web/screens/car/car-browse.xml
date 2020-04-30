@@ -33,6 +33,7 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
+                <column id="name"/>
                 <column id="carDealer"/>
                 <column id="carMake"/>
                 <column id="equipment"/>

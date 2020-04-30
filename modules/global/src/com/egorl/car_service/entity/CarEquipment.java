@@ -1,5 +1,6 @@
 package com.egorl.car_service.entity;
 
+import com.esotericsoftware.kryo.NotNull;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
@@ -11,16 +12,16 @@ import javax.persistence.*;
 public class CarEquipment extends StandardEntity {
     private static final long serialVersionUID = -2804669971804055849L;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false)
     private String name;
 
-    @Column(name = "PRICE")
+    @Column(name = "PRICE", nullable = false)
     private Integer price;
 
-    @Column(name = "CAR_TYPE")
+    @Column(name = "CAR_TYPE", nullable = false)
     private Integer carType;
 
-    @Column(name = "NOTE")
+    @Column(name = "NOTE", nullable = false)
     private String note;
 
     @ManyToOne

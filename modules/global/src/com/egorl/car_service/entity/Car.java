@@ -1,9 +1,11 @@
 package com.egorl.car_service.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 
+@NamePattern("%s|name")
 @Table(name = "CARSERVICE_CAR")
 @Entity(name = "carservice_Car")
 public class Car extends StandardEntity {
@@ -26,6 +28,23 @@ public class Car extends StandardEntity {
 
     @Column(name = "COST")
     private Integer cost;
+
+    @Column(name = "NAME")
+    protected String name;
+
+    @PreUpdate
+    @PrePersist
+    private void buildName() {
+        name = String.format("%s %s %s", carDealer.getName(), carMake.getName(), equipment.getName());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Integer getCost() {
         return cost;

@@ -78,10 +78,10 @@ create table CARSERVICE_CAR_EQUIPMENT (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    NAME varchar(255),
-    PRICE integer,
-    CAR_TYPE integer,
-    NOTE varchar(255),
+    NAME varchar(255) not null,
+    PRICE integer not null,
+    CAR_TYPE integer not null,
+    NOTE varchar(255) not null,
     CAR_MAKE_ID varchar(36),
     --
     primary key (ID)
@@ -103,6 +103,7 @@ create table CARSERVICE_CAR (
     EQUIPMENT_ID varchar(36),
     YEAR_OF_ISSUE integer,
     COST integer,
+    NAME varchar(255),
     --
     primary key (ID)
 )^
