@@ -7,5 +7,7 @@
         <item screen="carservice_CarEquipment.browse"/>
         <item screen="carservice_CarMake.browse"/>
         <item screen="carservice_Car.browse"/>
+        <item screen="carservice_Individual.browse"/>
+        <item screen="carservice_LegalEntity.browse"/>
     </menu>
 </menu-config>

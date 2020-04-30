@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.egorl.car_service.web.screens.legalentity">
+    <data>
+        <instance id="legalEntityDc"
+                  class="com.egorl.car_service.entity.LegalEntity"
+                  view="_local">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="legalEntityDc">
+            <column width="250px">
+                <textField id="nameField" property="name"/>
+                <textField id="innField" property="inn"/>
+                <textArea id="addressField" property="address" rows="5"/>
+                <textField id="telephoneField" property="telephone"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

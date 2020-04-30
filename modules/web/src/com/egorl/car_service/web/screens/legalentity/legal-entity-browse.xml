@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://browseCaption"
+        focusComponent="legalEntitiesTable"
+        messagesPack="com.egorl.car_service.web.screens.legalentity">
+    <data readOnly="true">
+        <collection id="legalEntitiesDc"
+                    class="com.egorl.car_service.entity.LegalEntity"
+                    view="_local">
+            <loader id="legalEntitiesDl">
+                <query>
+                    <![CDATA[select e from carservice_LegalEntity e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="legalEntitiesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="legalEntitiesTable"
+                dataLoader="legalEntitiesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="legalEntitiesTable"
+                    width="100%"
+                    dataContainer="legalEntitiesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="inn"/>
+                <column id="address"/>
+                <column id="telephone"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="legalEntitiesTable.create"/>
+                <button id="editBtn" action="legalEntitiesTable.edit"/>
+                <button id="removeBtn" action="legalEntitiesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

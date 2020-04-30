@@ -8,5 +8,7 @@
         <class>com.egorl.car_service.entity.CarMake</class>
         <class>com.egorl.car_service.entity.CarEquipment</class>
         <class>com.egorl.car_service.entity.Car</class>
+        <class>com.egorl.car_service.entity.Individual</class>
+        <class>com.egorl.car_service.entity.LegalEntity</class>
     </persistence-unit>
 </persistence>
