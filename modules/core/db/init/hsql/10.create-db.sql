@@ -118,11 +118,11 @@ create table CARSERVICE_LEGAL_ENTITY (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
+    TELEPHONE varchar(255) not null,
     --
     INN varchar(255),
     NAME varchar(255),
     ADDRESS longvarchar,
-    TELEPHONE varchar(255),
     --
     primary key (ID)
 )^
@@ -137,10 +137,10 @@ create table CARSERVICE_INDIVIDUAL (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
+    TELEPHONE varchar(255) not null,
     --
     NAME varchar(255),
     SURNAME varchar(255),
-    TELEPHONE varchar(255),
     --
     primary key (ID)
 )^

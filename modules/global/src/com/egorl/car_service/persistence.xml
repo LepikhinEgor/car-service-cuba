@@ -10,5 +10,6 @@
         <class>com.egorl.car_service.entity.Car</class>
         <class>com.egorl.car_service.entity.Individual</class>
         <class>com.egorl.car_service.entity.LegalEntity</class>
+        <class>com.egorl.car_service.entity.Person</class>
     </persistence-unit>
 </persistence>
