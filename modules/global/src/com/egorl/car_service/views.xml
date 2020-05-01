@@ -37,4 +37,22 @@
     <view entity="carservice_Car" name="car-view_5" extends="car-view_4">
         <property name="equipment" view="_local"/>
     </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view" extends="_local">
+        <property name="car" view="_local"/>
+    </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view_1" extends="purchaseRequest-view">
+        <property name="buyer" view="_local"/>
+    </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view_2" extends="purchaseRequest-view_1">
+        <property name="manager" view="_local"/>
+    </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view_3" extends="_local">
+        <property name="car" view="_local"/>
+    </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view_4" extends="purchaseRequest-view_3">
+        <property name="buyer" view="_local"/>
+    </view>
+    <view entity="carservice_PurchaseRequest" name="purchaseRequest-view_5" extends="purchaseRequest-view_4">
+        <property name="manager" view="_local"/>
+    </view>
 </views>

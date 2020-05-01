@@ -1,13 +1,14 @@
 package com.egorl.car_service.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@MappedSuperclass
+@NamePattern("%s|telephone")
+@Entity(name = "carservice_Person")
+@Table(name = "CARSERVICE_PERSON")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person extends StandardEntity {
     private static final long serialVersionUID = -4739312890935052914L;
 

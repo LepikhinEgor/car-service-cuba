@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@NamePattern("%s %s|name, surname")
+//@NamePattern("%s %s|name, surname")
 @Table(name = "CARSERVICE_INDIVIDUAL")
 @Entity(name = "carservice_Individual")
 public class Individual extends Person {

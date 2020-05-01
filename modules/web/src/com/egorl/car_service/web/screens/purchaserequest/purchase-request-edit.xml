@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.egorl.car_service.web.screens.purchaserequest">
+    <data>
+        <instance id="purchaseRequestDc"
+                  class="com.egorl.car_service.entity.PurchaseRequest"
+                  view="purchaseRequest-view_5">
+            <loader/>
+        </instance>
+        <collection id="CarsDc"
+                    class="com.egorl.car_service.entity.Car"
+                    view="_local">
+            <loader id="carDl">
+                <query>
+                    <![CDATA[select c from carservice_Car c]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="BuyersDc"
+                    class="com.egorl.car_service.entity.Person"
+                    view="_local">
+            <loader id="buyersDl">
+                <query>
+                    <![CDATA[select p from carservice_Person p]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="ManagersDc"
+                    class="com.haulmont.cuba.security.entity.User"
+                    view="_local">
+            <loader id="managersDl">
+                <query>
+                    <![CDATA[select u from sec$User u]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="purchaseRequestDc">
+            <column width="250px">
+                <lookupPickerField id="carField" optionsContainer="CarsDc" property="car">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+                <lookupPickerField id="buyerField" optionsContainer="BuyersDc" property="buyer">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+                <checkBox id="wasPaidField" property="wasPaid"/>
+                <textField id="priceField" property="price"/>
+                <lookupPickerField id="managerField" optionsContainer="ManagersDc" property="manager">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                    </actions>
+                </lookupPickerField>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
-@NamePattern("%s|name")
+//@NamePattern("%s|name")
 @Table(name = "CARSERVICE_LEGAL_ENTITY")
 @Entity(name = "carservice_LegalEntity")
 public class LegalEntity extends Person {
