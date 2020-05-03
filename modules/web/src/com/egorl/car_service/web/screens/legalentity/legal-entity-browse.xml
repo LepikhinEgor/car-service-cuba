@@ -33,7 +33,7 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="name"/>
+                <column id="legalName"/>
                 <column id="inn"/>
                 <column id="address"/>
                 <column id="telephone" />

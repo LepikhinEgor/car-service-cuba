@@ -109,41 +109,8 @@ create table CARSERVICE_CAR (
 )^
 -- end CARSERVICE_CAR
 -- begin CARSERVICE_LEGAL_ENTITY
-create table CARSERVICE_LEGAL_ENTITY (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    TELEPHONE varchar(255) not null,
-    --
-    INN varchar(255),
-    NAME varchar(255),
-    ADDRESS longvarchar,
-    --
-    primary key (ID)
-)^
 -- end CARSERVICE_LEGAL_ENTITY
 -- begin CARSERVICE_INDIVIDUAL
-create table CARSERVICE_INDIVIDUAL (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    TELEPHONE varchar(255) not null,
-    --
-    NAME varchar(255),
-    SURNAME varchar(255),
-    --
-    primary key (ID)
-)^
 -- end CARSERVICE_INDIVIDUAL
 -- begin CARSERVICE_PERSON
 create table CARSERVICE_PERSON (
@@ -155,8 +122,18 @@ create table CARSERVICE_PERSON (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
+    PERSON_TYPE varchar(31),
     --
     TELEPHONE varchar(255) not null,
+    --
+    -- from carservice_Individual
+    NAME varchar(255),
+    SURNAME varchar(255),
+    --
+    -- from carservice_LegalEntity
+    INN varchar(255),
+    LEGAL_NAME varchar(255),
+    ADDRESS longvarchar,
     --
     primary key (ID)
 )^

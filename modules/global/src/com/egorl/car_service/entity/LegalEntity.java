@@ -3,13 +3,10 @@ package com.egorl.car_service.entity;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 //@NamePattern("%s|name")
-@Table(name = "CARSERVICE_LEGAL_ENTITY")
+@DiscriminatorValue("LEGAL")
 @Entity(name = "carservice_LegalEntity")
 public class LegalEntity extends Person {
     private static final long serialVersionUID = -6645000748542165378L;
@@ -17,19 +14,19 @@ public class LegalEntity extends Person {
     @Column(name = "INN")
     private String inn;
 
-    @Column(name = "NAME")
-    private String name;
+    @Column(name = "LEGAL_NAME")
+    private String legalName;
 
     @Lob
     @Column(name = "ADDRESS")
     private String address;
 
-    public String getName() {
-        return name;
+    public String getLegalName() {
+        return legalName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLegalName(String legalName) {
+        this.legalName = legalName;
     }
 
     public String getAddress() {

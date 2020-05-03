@@ -15,7 +15,7 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="legalEntityDc">
             <column width="250px">
-                <textField id="nameField" property="name"/>
+                <textField id="nameField" property="legalName"/>
                 <textField id="innField" property="inn"/>
                 <textArea id="addressField" property="address" rows="5"/>
                 <textField id="telephoneField" property="telephone"/>

@@ -1,0 +1,9 @@
+alter table CARSERVICE_LEGAL_ENTITY drop column VERSION__U02196 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column CREATE_TS__U00904 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column CREATED_BY__U17439 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column UPDATE_TS__U28562 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column UPDATED_BY__U36810 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column DELETE_TS__U80440 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column DELETED_BY__U10712 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column NAME__U98687 cascade ;
+alter table CARSERVICE_LEGAL_ENTITY drop column TELEPHONE__U99801 cascade ;

@@ -8,7 +8,8 @@ import javax.persistence.*;
 @NamePattern("%s|telephone")
 @Entity(name = "carservice_Person")
 @Table(name = "CARSERVICE_PERSON")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorColumn(name = "PERSON_TYPE")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Person extends StandardEntity {
     private static final long serialVersionUID = -4739312890935052914L;
 
