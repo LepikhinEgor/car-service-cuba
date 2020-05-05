@@ -36,7 +36,9 @@
                 <column id="legalName"/>
                 <column id="inn"/>
                 <column id="address"/>
-                <column id="telephone" />
+                <column id="telephone">
+                    <formatter class="com.egorl.car_service.formatters.TelephoneFormatterService"/>
+                </column>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
