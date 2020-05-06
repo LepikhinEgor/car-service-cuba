@@ -11,24 +11,30 @@ import javax.persistence.*;
 @Entity(name = "carservice_PurchaseRequest")
 public class PurchaseRequest extends StandardEntity {
     private static final long serialVersionUID = 8913964474014226472L;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAR_ID")
     private Car car;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BUYER_ID")
     private Person buyer;
-
     @Column(name = "WAS_PAID")
     private Boolean wasPaid = false;
-
     @Column(name = "PRICE")
     private Integer price;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MANAGER_ID")
     private User manager;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "INDIVIDUAL_ID")
+    protected Individual individual;
+
+    public Individual getIndividual() {
+        return individual;
+    }
+
+    public void setIndividual(Individual individual) {
+        this.individual = individual;
+    }
 
     public User getManager() {
         return manager;

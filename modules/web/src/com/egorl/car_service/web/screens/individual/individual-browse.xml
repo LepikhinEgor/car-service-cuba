@@ -7,7 +7,7 @@
     <data readOnly="true">
         <collection id="individualsDc"
                     class="com.egorl.car_service.entity.Individual"
-                    view="_local">
+                    view="individual-view_1">
             <loader id="individualsDl">
                 <query>
                     <![CDATA[select e from carservice_Individual e]]>
@@ -26,7 +26,8 @@
         </filter>
         <groupTable id="individualsTable"
                     width="100%"
-                    dataContainer="individualsDc">
+                    dataContainer="individualsDc"
+                    aggregatable="true">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
@@ -37,6 +38,9 @@
                 <column id="surname"/>
                 <column id="telephone">
                     <formatter class="com.egorl.car_service.formatters.TelephoneFormatterService"/>
+                </column>
+                <column id="purchaseRequests">
+                    <aggregation strategyClass="com.egorl.car_service.web.RequestsCountAggregation"/>
                 </column>
             </columns>
             <rowsCount/>

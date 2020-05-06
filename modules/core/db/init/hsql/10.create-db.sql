@@ -108,10 +108,6 @@ create table CARSERVICE_CAR (
     primary key (ID)
 )^
 -- end CARSERVICE_CAR
--- begin CARSERVICE_LEGAL_ENTITY
--- end CARSERVICE_LEGAL_ENTITY
--- begin CARSERVICE_INDIVIDUAL
--- end CARSERVICE_INDIVIDUAL
 -- begin CARSERVICE_PERSON
 create table CARSERVICE_PERSON (
     ID varchar(36) not null,
@@ -154,6 +150,7 @@ create table CARSERVICE_PURCHASE_REQUEST (
     WAS_PAID boolean,
     PRICE integer,
     MANAGER_ID varchar(36),
+    INDIVIDUAL_ID varchar(36),
     --
     primary key (ID)
 )^
