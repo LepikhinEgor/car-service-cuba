@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import javax.persistence.NoResultException;
 
 @Service(CountryDaoService.NAME)
 public class CountryDaoServiceBean implements CountryDaoService {
@@ -34,6 +35,11 @@ public class CountryDaoServiceBean implements CountryDaoService {
         TypedQuery<Country> query = entityManager.createQuery("select c from carservice_Country c where c.name = :name", Country.class);
         query.setParameter("name", name);
 
-        return query.getSingleResult();
+        try {
+            Country country = query.getSingleResult();
+            return query.getSingleResult();
+        } catch (NoResultException ex) {
+            return null;
+        }
     }
 }
