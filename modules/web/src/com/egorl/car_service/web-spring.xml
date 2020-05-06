@@ -14,6 +14,7 @@
                 <entry key="carservice_CountryService" value="com.egorl.car_service.service.CountryService"/>
                 <entry key="carservice_CountryDaoService" value="com.egorl.car_service.dao.CountryDaoService"/>
                 <entry key="carservice_ManagerService" value="com.egorl.car_service.service.ManagerService"/>
+                <entry key="carservice_CarMakeService" value="com.egorl.car_service.service.CarMakeService"/>
             </map>
         </property>
     </bean>

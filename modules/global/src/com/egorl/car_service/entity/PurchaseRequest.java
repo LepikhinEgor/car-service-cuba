@@ -24,17 +24,6 @@ public class PurchaseRequest extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MANAGER_ID")
     private User manager;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "INDIVIDUAL_ID")
-    protected Individual individual;
-
-    public Individual getIndividual() {
-        return individual;
-    }
-
-    public void setIndividual(Individual individual) {
-        this.individual = individual;
-    }
 
     public User getManager() {
         return manager;
