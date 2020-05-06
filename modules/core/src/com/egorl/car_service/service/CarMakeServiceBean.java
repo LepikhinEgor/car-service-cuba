@@ -22,7 +22,7 @@ public class CarMakeServiceBean implements CarMakeService {
         EntityManager em = persistence.getEntityManager();
 
         TypedQuery<CarMake> query = em.createQuery(
-                "select distinct c.carMake from carservice_Car c left join carservice_PurchaseRequest pr on pr.car = cr", CarMake.class);
+                "select distinct c.carMake from carservice_Car c left join carservice_PurchaseRequest pr on pr.car = c where pr is null or pr.wasPaid = false", CarMake.class);
 
         return query.getResultList();
     }

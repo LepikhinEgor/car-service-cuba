@@ -39,9 +39,9 @@
                 <column id="telephone">
                     <formatter class="com.egorl.car_service.formatters.TelephoneFormatterService"/>
                 </column>
-                <column id="purchaseRequests">
-                    <aggregation strategyClass="com.egorl.car_service.web.RequestsCountAggregation"/>
-                </column>
+<!--                <column id="purchaseRequests">-->
+<!--                    <aggregation strategyClass="com.egorl.car_service.web.RequestsCountAggregation"/>-->
+<!--                </column>-->
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

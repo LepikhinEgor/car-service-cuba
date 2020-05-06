@@ -56,6 +56,6 @@
         <property name="manager" view="_local"/>
     </view>
     <view entity="carservice_Individual" name="individual-view_1" extends="_local">
-        <property name="purchaseRequests" view="_local"/>
+<!--        <property name="purchaseRequests" view="_local"/>-->
     </view>
 </views>

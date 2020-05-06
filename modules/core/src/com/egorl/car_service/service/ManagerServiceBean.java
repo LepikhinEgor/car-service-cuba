@@ -18,11 +18,11 @@ public class ManagerServiceBean implements ManagerService {
 
     @Override
     @Transactional(isolation = Isolation.READ_UNCOMMITTED, readOnly = true)
-    public Integer getPurchaseRequestsCount(User user) {
+    public Long getPurchaseRequestsCount(User user) {
         EntityManager em = persistence.getEntityManager();
         // create and execute Query
-        TypedQuery<Integer> query = em.createQuery(
-                "select COUNT(pr) from carservice_PurchaseRequest pr where pr.manager = :manager", Integer.class);
+        TypedQuery<Long> query = em.createQuery(
+                "select COUNT(pr) from carservice_PurchaseRequest pr where pr.manager = :manager", Long.class);
         query.setParameter("manager", user);
 
         return query.getSingleResult();

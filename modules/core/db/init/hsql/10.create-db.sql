@@ -150,7 +150,6 @@ create table CARSERVICE_PURCHASE_REQUEST (
     WAS_PAID boolean,
     PRICE integer,
     MANAGER_ID varchar(36),
-    INDIVIDUAL_ID varchar(36),
     --
     primary key (ID)
 )^
