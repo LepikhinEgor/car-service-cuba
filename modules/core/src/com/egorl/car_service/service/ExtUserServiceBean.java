@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ExtUserServiceBean implements ExtUserService {
 
     @Inject
-    Persistence persistence;
+    private Persistence persistence;
 
     @Override
     @Transactional

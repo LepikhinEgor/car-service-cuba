@@ -31,6 +31,12 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="excel" type="excel">
+                    <properties>
+                        <property name="fileName" value="legalEntities"/>
+                        <property name="exportAggregation" value="true"/>
+                    </properties>
+                </action>
             </actions>
             <columns>
                 <column id="legalName"/>
@@ -47,6 +53,7 @@
                 <button id="createBtn" action="legalEntitiesTable.create"/>
                 <button id="editBtn" action="legalEntitiesTable.edit"/>
                 <button id="removeBtn" action="legalEntitiesTable.remove"/>
+                <button id="excelButton" action="legalEntitiesTable.excel"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
