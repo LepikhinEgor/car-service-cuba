@@ -39,6 +39,7 @@
                 <column id="telephone">
                     <formatter class="com.egorl.car_service.formatters.TelephoneFormatterService"/>
                 </column>
+                <column id="requestsCount" generator="generateRequestsColumn"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
