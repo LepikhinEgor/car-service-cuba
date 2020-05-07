@@ -37,6 +37,7 @@
             </loader>
         </collection>
     </data>
+
     <dialogMode height="600"
                 width="800"/>
     <layout expand="editActions" spacing="true">
@@ -65,5 +66,9 @@
             <button action="windowCommitAndClose"/>
             <button action="windowClose"/>
         </hbox>
+        <frame id="diffFrame"
+               src="/com/haulmont/cuba/gui/app/core/entitydiff/diff-view.xml"
+               width="80%"
+               height="20%"/>
     </layout>
 </window>
