@@ -22,17 +22,13 @@ class ManagerServiceBeanTest {
     @RegisterExtension
     public static CarserviceTestContainer cont = CarserviceTestContainer.Common.INSTANCE;
 
-    private static Metadata metadata;
     private static Persistence persistence;
-    private static DataManager dataManager;
 
     private ManagerService managerService = AppBeans.get(ManagerService.class);
 
     @BeforeAll
     public static void beforeAll() throws Exception {
-        metadata = cont.metadata();
         persistence = cont.persistence();
-        dataManager = AppBeans.get(DataManager.class);
     }
 
     @Test
