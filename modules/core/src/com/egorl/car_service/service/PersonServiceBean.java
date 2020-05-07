@@ -4,6 +4,8 @@ import com.egorl.car_service.entity.Person;
 import com.egorl.car_service.entity.PurchaseRequest;
 import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
+import com.haulmont.cuba.core.Persistence;
+import com.haulmont.cuba.core.global.AppBeans;
 import com.haulmont.cuba.core.TypedQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

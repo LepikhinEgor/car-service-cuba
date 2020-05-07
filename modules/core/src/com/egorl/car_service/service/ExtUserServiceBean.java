@@ -12,8 +12,12 @@ import java.util.UUID;
 @Service(ExtUserService.NAME)
 public class ExtUserServiceBean implements ExtUserService {
 
-    @Inject
     private Persistence persistence;
+
+    @Inject
+    public void setPersistence(Persistence persistence) {
+        this.persistence = persistence;
+    }
 
     @Override
     @Transactional

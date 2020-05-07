@@ -21,25 +21,6 @@ public class Individual extends Person {
     @Column(name = "SURNAME")
     private String surname;
 
-//    @Composition
-//    @OnDelete(DeletePolicy.CASCADE)
-//    @OneToMany(mappedBy = "individual")
-//    private List<PurchaseRequest> purchaseRequests;
-//
-//    @Transient
-//    private Integer purchaseRequestsCount;
-//
-//    public Integer getPurchaseRequestsCount() {
-//        return purchaseRequests.size();
-//    }
-//
-//    public List<PurchaseRequest> getPurchaseRequests() {
-//        return purchaseRequests;
-//    }
-//
-//    public void setPurchaseRequests(List<PurchaseRequest> purchaseRequests) {
-//        this.purchaseRequests = purchaseRequests;
-//    }
 
     public String getSurname() {
         return surname;
