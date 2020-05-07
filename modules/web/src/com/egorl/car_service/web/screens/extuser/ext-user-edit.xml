@@ -5,7 +5,7 @@
         extends="com/haulmont/cuba/gui/app/security/user/edit/user-edit.xml"
         messagesPack="com.egorl.car_service.web.screens.extuser">
     <dsContext>
-        <datasource id="userDs" class="com.egorl.car_service.entity.ExtUser" view="_local"/>
+<!--        <datasource id="extUserDs" class="com.egorl.car_service.entity.ExtUser" view="user.browse"/>-->
         <collectionDatasource id="countriesDs" class="com.egorl.car_service.entity.Country" view="_local">
             <query>select c from carservice_Country c</query>
         </collectionDatasource>
@@ -17,14 +17,9 @@
                     <row id="propertiesRow">
                         <fieldGroup id="fieldGroupLeft">
                             <column>
-                                <field ext:index="3" id="defaultCountry" property="defaultCountry">
-                                    <lookupPickerField id="countryField" datasource="userDs" optionsDatasource="countriesDs" property="defaultCountry"/>
+                                <field ext:index="3" datasource="userDs" id="defaultCountry" property="defaultCountry">
+                                    <lookupPickerField datasource="userDs" id="countryField" optionsDatasource="countriesDs" property="defaultCountry"/>
                                 </field>
-<!--                                <LookupField id="carDealerField" optionsContainer="CarDealersDc" property="carDealer">-->
-<!--                                    <actions>-->
-<!--                                        <action id="lookup" type="picker_lookup"/>-->
-<!--                                    </actions>-->
-<!--                                </LookupField>-->
                             </column>
                         </fieldGroup>
                     </row>

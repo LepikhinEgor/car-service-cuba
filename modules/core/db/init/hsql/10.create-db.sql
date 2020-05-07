@@ -155,7 +155,7 @@ create table CARSERVICE_PURCHASE_REQUEST (
 )^
 -- end CARSERVICE_PURCHASE_REQUEST
 -- begin SEC_USER
-alter table SEC_USER add column DEFAULT_COUNTRY varchar(255) ^
+alter table SEC_USER add column DEFAULT_COUNTRY_ID varchar(36) ^
 alter table SEC_USER add column DTYPE varchar(100) ^
 update SEC_USER set DTYPE = 'carservice_ExtUser' where DTYPE is null ^
 -- end SEC_USER

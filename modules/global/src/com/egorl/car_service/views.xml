@@ -58,4 +58,10 @@
     <view entity="carservice_Individual" name="individual-view_1" extends="_local">
 <!--        <property name="purchaseRequests" view="_local"/>-->
     </view>
+    <view class="com.egorl.car_service.entity.ExtUser" name="user.browse" extends="user.browse">
+        <property name="defaultCountry"/>
+    </view>
+    <view class="com.egorl.car_service.entity.ExtUser" name="user.edit" extends="user.edit">
+        <property name="defaultCountry"/>
+    </view>
 </views>
