@@ -10,9 +10,15 @@ insert into CARSERVICE_COLOR(ID,VERSION,CREATE_TS,CREATED_BY,UPDATE_TS,UPDATED_B
  values ('30fc2e68-8fa2-11ea-bc55-0242ac130003', 0, now(), 'admin', null, null, null, null, 'White', 'ffffff')^
 
  insert into SEC_LOGGED_ENTITY (ID, CREATE_TS, CREATED_BY, NAME, AUTO, MANUAL)
- values ('1733b700-9103-11ea-bb37-0242ac130002', now(), 'admin', 'carservice_CarDealer', true, true)^
+ values ('1733b700-9103-11ea-bb37-0242ac130002', now(), 'admin', 'carservice_PurchaseRequest', true, true)^
  insert into SEC_LOGGED_ATTR (ID, CREATE_TS, CREATED_BY, ENTITY_ID, NAME)
- values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'name')^
+ values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'car')^
  insert into SEC_LOGGED_ATTR (ID, CREATE_TS, CREATED_BY, ENTITY_ID, NAME)
- values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'country')
+ values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'buyer')^
+ insert into SEC_LOGGED_ATTR (ID, CREATE_TS, CREATED_BY, ENTITY_ID, NAME)
+ values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'wasPaid')^
+ insert into SEC_LOGGED_ATTR (ID, CREATE_TS, CREATED_BY, ENTITY_ID, NAME)
+ values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'price')^
+ insert into SEC_LOGGED_ATTR (ID, CREATE_TS, CREATED_BY, ENTITY_ID, NAME)
+ values (newid(), now(), 'admin', '1733b700-9103-11ea-bb37-0242ac130002', 'manager')^
 
