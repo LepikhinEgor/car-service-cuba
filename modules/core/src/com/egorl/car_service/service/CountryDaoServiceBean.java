@@ -17,16 +17,12 @@ import javax.persistence.NoResultException;
 @Service(CountryDaoService.NAME)
 public class CountryDaoServiceBean implements CountryDaoService {
 
-    @Inject
     private Persistence persistence;
 
     @Inject
-    private Metadata metadata;
-
-//    @Inject
-//    public void setPersistence(Persistence persistence) {
-//        this.persistence = persistence;
-//    }
+    public void setPersistence(Persistence persistence) {
+        this.persistence = persistence;
+    }
 
     @Transactional
     public void create(Country country) {

@@ -13,8 +13,12 @@ import java.util.List;
 @Service(CarMakeService.NAME)
 public class CarMakeServiceBean implements CarMakeService {
 
-    @Inject
     private Persistence persistence;
+
+    @Inject
+    public void setPersistence(Persistence persistence) {
+        this.persistence = persistence;
+    }
 
     @Override
     @Transactional

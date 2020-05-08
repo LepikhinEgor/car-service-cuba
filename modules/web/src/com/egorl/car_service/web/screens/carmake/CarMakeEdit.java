@@ -10,7 +10,6 @@ import javax.inject.Inject;
 @UiController("carservice_CarMake.edit")
 @UiDescriptor("car-make-edit.xml")
 @EditedEntityContainer("carMakeDc")
-//@LoadDataBeforeShow
 public class CarMakeEdit extends StandardEditor<CarMake> {
 
     @Inject

@@ -27,6 +27,6 @@ public class CarDealerEdit extends StandardEditor<CarDealer> {
     @Subscribe
     public void onBeforeShow(BeforeShowEvent event) {
         if( getEditedEntity().getCountry() == null)
-            countryField.setValue(countryService.getDefaultCountry());
+            countryField.setValue(countryService.getUserDefaultCountry());
     }
 }

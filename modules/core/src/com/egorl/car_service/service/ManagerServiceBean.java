@@ -12,9 +12,13 @@ import javax.inject.Inject;
 
 @Service(ManagerService.NAME)
 public class ManagerServiceBean implements ManagerService {
+    
+    private Persistence persistence;
 
     @Inject
-    private Persistence persistence;
+    public void setPersistence(Persistence persistence) {
+        this.persistence = persistence;
+    }
 
     @Override
     @Transactional(isolation = Isolation.READ_UNCOMMITTED, readOnly = true)

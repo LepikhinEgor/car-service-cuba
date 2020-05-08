@@ -17,14 +17,26 @@ import javax.inject.Inject;
 @Component
 public class DBFiller {
 
-    @Inject
     private CountryDaoService countryDao;
 
-    @Inject
     private CountryConfig countryConfig;
 
-    @Inject
     private Metadata metadata;
+
+    @Inject
+    public void setMetadata(Metadata metadata) {
+        this.metadata = metadata;
+    }
+
+    @Inject
+    public void setCountryDao(CountryDaoService countryDao) {
+        this.countryDao = countryDao;
+    }
+
+    @Inject
+    public void setCountryConfig(CountryConfig countryConfig) {
+        this.countryConfig = countryConfig;
+    }
 
     @Authenticated
     @EventListener(AppContextStartedEvent.class)

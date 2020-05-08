@@ -24,13 +24,6 @@ public class CarDealer extends StandardEntity {
     @Transient
     private CountryService countryService;
 
-    //    @PrePersist
-//    public void prePersist() {
-//        countryService = AppContext.getApplicationContext().getBean(CountryService.class); //??? Иожно ли иначе, через Inject
-//        if (country == null)
-//            country = countryService.getDefaultCountry();
-//    }
-
     public Country getCountry() {
         return country;
     }

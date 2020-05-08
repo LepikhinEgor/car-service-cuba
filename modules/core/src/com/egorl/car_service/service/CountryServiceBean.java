@@ -13,21 +13,37 @@ import javax.inject.Inject;
 @Service(CountryService.NAME)
 public class CountryServiceBean implements CountryService {
 
-    @Inject
     private CountryConfig countryConfig;
 
-    @Inject
     private UserSessionSource userSessionSource;
 
-    @Inject
     private CountryDaoService countryDao;
 
-    @Inject
     private ExtUserService extUserService;
+
+    @Inject
+    public void setUserSessionSource(UserSessionSource userSessionSource) {
+        this.userSessionSource = userSessionSource;
+    }
+
+    @Inject
+    public void setExtUserService(ExtUserService extUserService) {
+        this.extUserService = extUserService;
+    }
+
+    @Inject
+    public void setCountryDao(CountryDaoService countryDao) {
+        this.countryDao = countryDao;
+    }
+
+    @Inject
+    public void setCountryConfig(CountryConfig countryConfig) {
+        this.countryConfig = countryConfig;
+    }
 
     @Override
     @Transactional
-    public Country getDefaultCountry() {
+    public Country getUserDefaultCountry() {
         Country defaultCountry;
         ExtUser extUser = extUserService.getById(userSessionSource.currentOrSubstitutedUserId());
 
