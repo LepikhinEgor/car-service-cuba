@@ -10,5 +10,6 @@
         <item screen="carservice_Individual.browse"/>
         <item screen="carservice_LegalEntity.browse"/>
         <item screen="carservice_PurchaseRequest.browse"/>
+        <item screen="carservice_ManagerRequests"/>
     </menu>
 </menu-config>

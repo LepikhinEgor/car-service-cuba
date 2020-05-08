@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.egorl.car_service.web.screens.managerrequests">
+    <data>
+        <collection id="usersDs"
+                    class="com.haulmont.cuba.security.entity.User"
+                    view="_local">
+            <loader id="usersDl">
+                <query>
+                    <![CDATA[select u from sec$User u]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="managerRequestsDs"
+                    class="com.egorl.car_service.entity.PurchaseRequest"
+                    view="purchaseRequest-view_5">
+            <loader id="requestsDl">
+                <query>
+                    <![CDATA[select pr from carservice_PurchaseRequest pr where pr.manager = :manager]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <form id="form">
+            <lookupPickerField id="managerLookup" optionsContainer="usersDs">
+                <actions>
+                    <action id="lookup" type="picker_lookup"/>
+                </actions>
+            </lookupPickerField>
+        </form>
+        <groupBox caption="Requests">
+            <table id="ordersDcTable" dataContainer="managerRequestsDs" height="50%" width="100%">
+                <columns includeAll="true"/>
+            </table>
+        </groupBox>
+    </layout>
+</window>
