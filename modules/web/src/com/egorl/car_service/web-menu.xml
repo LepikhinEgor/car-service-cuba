@@ -11,5 +11,6 @@
         <item screen="carservice_LegalEntity.browse"/>
         <item screen="carservice_PurchaseRequest.browse"/>
         <item screen="carservice_ManagerRequests"/>
+        <item screen="carservice_UnsoldCarmakes"/>
     </menu>
 </menu-config>

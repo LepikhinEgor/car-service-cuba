@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.egorl.car_service.web.screens.unsoldcarmakes">
+    <data>
+        <collection id="carMakesDs"
+                    class="com.egorl.car_service.entity.CarMake"
+                    view="carMake-view_1">
+            <loader id="carmakesDl"/>
+        </collection>
+    </data>
+    <layout>
+        <groupBox caption="Unsold car makes">
+            <table id="carMakesTable" dataContainer="carMakesDs" height="100%" width="100%">
+                <columns includeAll="true"/>
+            </table>
+        </groupBox>
+    </layout>
+</window>
