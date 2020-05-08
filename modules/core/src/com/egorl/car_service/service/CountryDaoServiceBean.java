@@ -3,7 +3,11 @@ package com.egorl.car_service.service;
 import com.egorl.car_service.entity.Country;
 import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
+import com.haulmont.cuba.core.Query;
 import com.haulmont.cuba.core.TypedQuery;
+import com.haulmont.cuba.core.global.Metadata;
+import com.haulmont.cuba.security.entity.LoggedAttribute;
+import com.haulmont.cuba.security.entity.LoggedEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +19,9 @@ public class CountryDaoServiceBean implements CountryDaoService {
 
     @Inject
     private Persistence persistence;
+
+    @Inject
+    private Metadata metadata;
 
 //    @Inject
 //    public void setPersistence(Persistence persistence) {

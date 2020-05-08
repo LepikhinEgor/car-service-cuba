@@ -18,37 +18,4 @@ import java.util.Objects;
 @LoadDataBeforeShow
 public class PurchaseRequestEdit extends StandardEditor<PurchaseRequest> {
 
-    @Inject
-    protected EntitySnapshotService entitySnapshotService;
-
-    @Inject
-    private EntityStates entityStates;
-
-    @Inject
-    protected EntityDiffViewer diffFrame;
-
-//    @Override
-//    protected void commit(Action.ActionPerformedEvent event) {
-//        super.commit(event);
-//        entitySnapshotService.createSnapshot(getEditedEntity(), Objects.requireNonNull(getEditedEntityContainer().getView()));
-//    }
-
-
-
-    @Subscribe
-    public void afterCommitEvent(AfterCommitChangesEvent event) {
-        EntitySnapshot old = entitySnapshotService.getLastEntitySnapshot(getEditedEntity());
-        EntitySnapshot newSnapshot = entitySnapshotService.createSnapshot(getEditedEntity(), Objects.requireNonNull(getEditedEntityContainer().getView()));
-        EntityDiff diff = entitySnapshotService.getDifference(old, newSnapshot);
-        String s = diff.toString();
-
-        System.out.println();
-    }
-
-    @Subscribe
-    public void onBeforeAction(BeforeShowEvent event) {
-        if (!entityStates.isNew(getEditedEntity())) {
-            diffFrame.loadVersions(getEditedEntity());
-        }
-    }
 }

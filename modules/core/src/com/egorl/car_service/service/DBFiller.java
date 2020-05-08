@@ -34,6 +34,7 @@ public class DBFiller {
 
         if (countryDao.findByName(defaultCountry.getName()) == null)
             countryDao.create(defaultCountry);
+
     }
 
     private Country getDefaultCountry() {

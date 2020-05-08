@@ -25,6 +25,10 @@ public class PurchaseRequest extends StandardEntity {
     @JoinColumn(name = "MANAGER_ID")
     private User manager;
 
+    public String getCarName() {
+        return car.getName();
+    }
+
     public User getManager() {
         return manager;
     }
